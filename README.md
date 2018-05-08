@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
+AUTHOR:aislaaps
+
+DATE: May 2018
+
+An App to make use of DialogFlow in Angular 5.  SpeechRecognition for voice to text, and Synthesis Utterance to give voice for the bot response is also included.  Chrome browser works best for this App.
+
+DialogFlow API.AI should be installed and is already included in this project. If not run:
+npm install api-ai-javascript --save-dev
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

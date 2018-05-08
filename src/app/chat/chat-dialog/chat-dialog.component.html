@@ -1,0 +1,31 @@
+<div class="container">
+<h1>Angular Bot</h1>
+
+<ng-container *ngFor="let message of messages | async">
+
+  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                    'to':   message.sentBy === 'user' }">
+    {{ message.content }}
+  </div>
+
+</ng-container>
+
+
+<label for="nameField">Your Message</label>
+
+
+<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+
+<button (click)="sendMessage()">Send</button>
+<button class="btn btn-info btn-fill btn-wd" name="btnActivateSpeechSearch" 
+  id="btnActivateSpeechSearch" (click)="activateSpeechSearch()"
+  [disabled]="!startListenButton">
+  Start Listening
+</button>
+<button class="btn btn-info btn-fill btn-wd" name="btnDeactivateSpeechSearch" 
+  id="btnDeactivateSpeechSearch" (click)="deActivateSpeechSearch()"
+  [disabled]="startListenButton">
+  Stop Listening
+</button>
+
+</div>
